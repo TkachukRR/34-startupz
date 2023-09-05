@@ -8,5 +8,15 @@
 @import url("https://db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold");
 
 @tailwind base;
+
+@layer components {
+  .btn {
+    @apply px-[35px] py-[15px] border rounded-[32.5px] text-xs;
+  }
+
+  .btn--transp-green {
+    @apply text-complementary-green hover:text-complementary-white hover:bg-complementary-green;
+  }
+}
 @tailwind components;
 @tailwind utilities;
