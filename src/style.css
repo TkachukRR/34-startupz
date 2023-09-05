@@ -11,11 +11,15 @@
 
 @layer components {
   .btn {
-    @apply px-[35px] py-[15px] border rounded-[32.5px] text-xs tracking-[normal];
+    @apply px-[35px] py-[15px] border rounded-[32.5px] text-xs tracking-[normal] inline-block;
   }
 
   .btn--transp-green {
     @apply text-complementary-green hover:text-complementary-white hover:bg-complementary-green transition-all duration-300 ease-in-out;
+  }
+
+  .btn--green-white {
+    @apply bg-complementary-green text-complementary-white hover:text-complementary-green hover:bg-complementary-white transition-all duration-300 ease-in-out;
   }
 
   .nav--link {
