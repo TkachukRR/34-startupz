@@ -1,0 +1,17 @@
+{
+  "name": "45-starupz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --port 3000 --open"
+  },
+  "keywords": [],
+  "author": "Tkachuk Roman",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3"
+  }
+}
