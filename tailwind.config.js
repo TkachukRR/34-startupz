@@ -4,10 +4,20 @@ module.exports = {
   content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      s: "480px",
-      m: "768px",
-      l: "1440px",
+      sm: "480px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "40px",
+        sm: "20px",
+        md: "30px",
+      },
+    },
+
     fontFamily: {
       roboto: ["Roboto", "sans-serif"],
       "circular-book": ["Circular Std Book", "sans-serif"],

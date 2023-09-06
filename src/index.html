@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>statrupz</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="font-circular-bold text-txt-primary bg-bg-primary">
-    <header class="max-w-[1440px] mx-auto px-[120px] py-[30px] flex items-end">
-      <a href="/" class="inline-block align-middle">
+    <header
+      class="container text-center py-[20px] md:py-[30px] md:flex md:items-end"
+    >
+      <a href="/" class="mb-[10px] md:mb-0 inline-block align-middle">
         <img
           src="./images/logo.svg"
           alt="logo startupz company"
@@ -16,12 +18,12 @@
         />
       </a>
       <div
-        class="inline-flex justify-between items-baseline place-items-end gap-[42px] ml-auto"
+        class="md:inline-flex justify-between items-baseline place-items-end gap-[20px] md:gap-[40px] ml-auto"
       >
         <nav>
-          <ul class="flex gap-[40px]">
-            <li><a class="nav--link">Startups</a></li>
-            <li><a class="nav--link">Contact</a></li>
+          <ul class="flex justify-center gap-[40px] mb-[10px] md:mb-0">
+            <li><a class="nav--link py-[10px]">Startups</a></li>
+            <li><a class="nav--link py-[10px]">Contact</a></li>
           </ul>
         </nav>
         <button type="button" class="btn btn--transp-green">
@@ -35,13 +37,68 @@
         class="hero bg-no-repeat bg-right-bottom"
         style="background-image: url(./images/hero.png)"
       >
-        <div class="max-w-[1440px] mx-auto pt-[125px] pb-[225px] px-[120px]">
-          <h1 class="text-xxxl mb-[25px]">We Create <br />Startups.</h1>
-          <p class="text-txt-secondary text-s font-circular-book mb-[25px]">
+        <div
+          class="container px-[40px] pt-[125px] pb-[225px] flex flex-col items-center lg:items-start text-center lg:text-start"
+        >
+          <h1
+            class="text-xl md:text-xxxl mb-[25px] bg-bg-primary xl:bg-opacity-0"
+          >
+            We Create <br />Startups.
+          </h1>
+          <p
+            class="text-txt-secondary text-s font-circular-book mb-[25px] bg-bg-primary xl:bg-opacity-0"
+          >
             We are a team of professionals who are passionate about creating
             startups.
           </p>
           <a href="#" class="btn btn--green-white px-[20px]">See our works</a>
+        </div>
+      </section>
+
+      <section class="about bg-bg-secondary">
+        <div class="container px-[40px] py-[147px]">
+          <h2 class="text-xl mb-[32px] relative">
+            Who we are
+            <span class="sr-only">?</span>
+            <img
+              class="not-sr-only absolute top-0 right-0 animate-swing"
+              src="./images/question.png"
+              alt="question mark"
+            />
+          </h2>
+          <p class="text-txt-secondary text-s mb-[60px]">
+            We create products that have innovation and technology at their
+            core.
+            <br />
+            We value working with talented people that understand the
+            possibilities of today.
+          </p>
+          <ul class="text-base lg:flex flex-wrap lg:space-x-[95px]">
+            <li class="flex-1">
+              <div
+                class="inline-block leading-snug text-txt-secondary py-[20px] pr-[20px] border-b border-txt-primary mb-[26px]"
+              >
+                01
+              </div>
+              <p>We develop innovative products, systems and services</p>
+            </li>
+            <li class="flex-1">
+              <div
+                class="inline-block leading-snug text-txt-secondary py-[20px] pr-[20px] border-b border-txt-primary mb-[26px]"
+              >
+                02
+              </div>
+              <p>Next we build teams to scale them into companies</p>
+            </li>
+            <li class="flex-1">
+              <div
+                class="inline-block leading-snug text-txt-secondary py-[20px] pr-[20px] border-b border-txt-primary mb-[26px]"
+              >
+                03
+              </div>
+              <p>Each startup solving one problem at a time</p>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

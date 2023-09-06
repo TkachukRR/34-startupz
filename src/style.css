@@ -10,6 +10,9 @@
 @tailwind base;
 
 @layer components {
+  a {
+    @apply inline-block;
+  }
   .btn {
     @apply px-[35px] py-[15px] border rounded-[32.5px] text-xs tracking-[normal] inline-block;
   }
@@ -28,3 +31,26 @@
 }
 @tailwind components;
 @tailwind utilities;
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-swing {
+  animation: swing 1s ease-in-out infinite;
+  transform-origin: bottom center;
+}
