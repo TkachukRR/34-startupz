@@ -35,10 +35,7 @@
     </header>
 
     <main>
-      <section
-        class="hero bg-no-repeat bg-right-bottom"
-        style="background-image: url(./images/hero.png)"
-      >
+      <section class="hero bg-[url('./images/hero.png')] bg-no-repeat bg-r-b">
         <div
           class="container px-[40px] pt-[125px] pb-[225px] flex flex-col items-center lg:items-start text-center lg:text-start"
         >
@@ -250,12 +247,69 @@
         class="hiring bg-bg-secondary bg-[url('./images/left.png'),url('./images/right.png')] bg-no-repeat bg-l-r"
       >
         <div class="container max-w-[500px] pt-[140px] pb-[165px] text-center">
-          <h3 class="text-xl mb-[30px]">We are hiring!</h3>
-          <p class="text-txt-secondary text-s font-circular-book mb-[30px]">
+          <h3 class="text-xl mb-[30px] bg-bg-secondary bg-opacity-50">
+            We are hiring!
+          </h3>
+          <p
+            class="text-txt-secondary text-s font-circular-book mb-[30px] bg-bg-secondary bg-opacity-50"
+          >
             We're always looking for talented people to join and help build our
             startups. Check out our current openings
           </p>
           <a href="#" class="btn btn--green-white">See current openings </a>
+        </div>
+      </section>
+
+      <section class="form bg-bg-accent">
+        <div class="container pt-[60px] pb-[70px] text-complementary-white">
+          <h3 class="text-xxl mb-[34px]">
+            Are you ready <br />to board this rocket ship?
+          </h3>
+
+          <form class="font-roboto font-medium leading-tight max-w-[512px]">
+            <h4 class="text-s mb-[34px]">Share your excitement with us.</h4>
+            <fieldset
+              class="bg-bg-form pt-[72px] pb-[40px] px-[42px] rounded-[10px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] text-center"
+              aria-label="Message to us."
+            >
+              <input
+                class="w-full px-[18px] py-[16px] rounded-[10px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] mb-[16px] text-txt-primary"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name*"
+                required
+                aria-label="Name"
+                aria-required="true"
+              />
+              <input
+                class="w-full px-[18px] py-[16px] rounded-[10px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] mb-[16px] text-txt-primary"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email*"
+                required
+                aria-label="Email"
+                aria-required="true"
+              />
+              <textarea
+                class="w-full px-[18px] py-[16px] rounded-[10px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] mb-[34px] text-txt-primary"
+                id="message"
+                name="message"
+                placeholder="Message*"
+                rows="4"
+                required
+                aria-label="Message"
+                aria-required="true"
+              ></textarea>
+              <button
+                class="btn bg-txt-primary hover:bg-bg-accent transition-all duration-300 ease-in-out"
+                type="submit"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
         </div>
       </section>
     </main>

@@ -47,6 +47,7 @@ module.exports = {
         primary: "#FFFFFF",
         secondary: "#FBFAFA",
         accent: "#FFC351",
+        form: "#F3F3F3",
       },
     },
     fontSize: {
@@ -74,6 +75,7 @@ module.exports = {
     },
     backgroundPosition: {
       "l-r": "left, right",
+      "r-b": "right bottom",
     },
     extend: {},
   },
