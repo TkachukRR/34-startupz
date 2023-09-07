@@ -76,6 +76,7 @@ module.exports = {
     backgroundPosition: {
       "l-r": "left, right",
       "r-b": "right bottom",
+      c: "center",
     },
     extend: {},
   },
