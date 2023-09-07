@@ -72,6 +72,9 @@ module.exports = {
       tight: "-0.32px",
       normal: "-0.3px",
     },
+    backgroundPosition: {
+      "l-r": "left, right",
+    },
     extend: {},
   },
   plugins: [],
