@@ -11,22 +11,26 @@
 
 @layer components {
   a {
-    @apply inline-block;
+    @apply inline-block link-transition cursor-pointer;
   }
   .btn {
-    @apply px-[35px] py-[15px] border rounded-[32.5px] text-xs tracking-[normal] inline-block;
+    @apply px-[35px] py-[15px] border rounded-[32.5px] text-xs tracking-[normal] inline-block link-transition;
   }
 
   .btn--transp-green {
-    @apply text-complementary-green hover:text-complementary-white hover:bg-complementary-green transition-all duration-300 ease-in-out;
+    @apply text-complementary-green hover:text-complementary-white hover:bg-complementary-green;
   }
 
   .btn--green-white {
-    @apply bg-complementary-green text-complementary-white hover:text-complementary-green hover:bg-complementary-white transition-all duration-300 ease-in-out;
+    @apply bg-complementary-green text-complementary-white hover:text-complementary-green hover:bg-complementary-white;
   }
 
   .nav--link {
-    @apply font-circular-book text-xs cursor-pointer hover:text-complementary-green transition-all duration-300 ease-in-out;
+    @apply font-circular-book text-xs cursor-pointer hover:text-complementary-green;
+  }
+
+  .link-transition {
+    @apply transition-all duration-300 ease-in-out;
   }
 }
 @tailwind components;
@@ -70,4 +74,17 @@
 .animate-breath {
   animation: breath 1.5s ease-in-out infinite;
   transform-origin: bottom center;
+}
+
+@keyframes fly {
+  from {
+    transform: rotate(-20deg) translateY(500px) scale(10);
+  }
+}
+
+.rocket {
+  animation-name: fly;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }

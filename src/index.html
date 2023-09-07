@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Test task from startups company." />
     <title>statrupz</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -10,12 +11,18 @@
     <header
       class="container text-center py-[20px] md:py-[30px] md:flex md:items-end"
     >
-      <a href="/" class="mb-[10px] md:mb-0 inline-block align-middle">
+      <a href="/" class="mb-[10px] md:mb-0 inline-block align-middle relative">
         <img
           src="./images/logo.svg"
           alt="logo startupz company"
           class="h-[47.848px] w-[199.486px]"
         />
+        <div
+          class="bg-bg-primary absolute h-[47.848px] w-[30px] top-0 left-0"
+        ></div>
+        <div
+          class="bg-[url('./images/r.svg')] absolute h-[47.848px] w-[29.5px] top-0 left-0 rocket"
+        ></div>
       </a>
       <div
         class="md:inline-flex justify-between items-baseline place-items-end gap-[20px] md:gap-[40px] ml-auto"
@@ -63,11 +70,9 @@
           <h2 class="text-xl mb-[32px] relative">
             Who we are
             <span class="sr-only">?</span>
-            <img
-              class="not-sr-only absolute top-0 right-0 animate-swing"
-              src="./images/question.png"
-              alt="question mark"
-            />
+            <div
+              class="opacity-0 md:opacity-100 bg-[url('./images/question.png')] h-[88px] w-[75px] not-sr-only absolute top-0 right-0 animate-swing"
+            ></div>
           </h2>
           <p class="text-txt-secondary text-s mb-[79px]">
             We create products that have innovation and technology at their
@@ -100,13 +105,13 @@
         class="banner container pt-[156px] pb-[140px] flex justify-center items-baseline space-x-[34px]"
       >
         <div
-          class="w-[59px] h-[66px] bg-[url('./images/thumb.png')] bg-right-bottom"
+          class="opacity-0 md:opacity-100 w-[59px] h-[66px] bg-[url('./images/thumb.png')] bg-right-bottom"
         ></div>
         <h3 class="text-l text-txt-secondary text-center">
           We love solving problems!
         </h3>
         <div
-          class="w-[59px] h-[66px] bg-[url('./images/thumb.png')] bg-right-bottom transform scale-x-[-1]"
+          class="opacity-0 md:opacity-100 w-[59px] h-[66px] bg-[url('./images/thumb.png')] bg-right-bottom transform scale-x-[-1]"
         ></div>
       </section>
 
@@ -114,11 +119,9 @@
         <div class="container px-[40px] pt-[172px] pb-[196px]">
           <h2 class="text-xl mb-[117px] relative">
             Our core values
-            <img
-              class="not-sr-only absolute top-0 right-0 animate-breath"
-              src="./images/lamp.png"
-              alt="lamp"
-            />
+            <div
+              class="opacity-0 md:opacity-100 bg-[url('./images/lamp.png')] h-[108px] w-[90px] not-sr-only absolute top-0 right-0 animate-breath"
+            ></div>
           </h2>
           <ul class="text-base lg:flex gap-[74px]">
             <li class="mb-[30px] lg:mb-0">
@@ -145,9 +148,9 @@
 
       <section id="works" class="works container pt-[140px] pb-[180px]">
         <h2 class="text-xl text-center tracking-[1px] mb-[55px]">Our works</h2>
-        <ul class="mb-[180px] lg:flex flex-wrap">
+        <ul class="mb-[180px] grid lg:grid-cols-2 gap-[15px]">
           <li
-            class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] basis-1/2 flex flex-col items-center text-center"
+            class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] flex flex-col items-center text-center"
           >
             <h4 class="text-[32px] leading-[30px] text-card-first mb-[25px]">
               Tolq
@@ -157,8 +160,13 @@
               all pieces of the localization puzzle in one single integrated
               solution.
             </p>
-            <div class="h-[244px] overflow-hidden mb-[25px]">
-              <img src="./images/img1.jpg" alt="work" class="mx-auto" />
+            <div class="overflow-hidden mb-[25px]">
+              <img
+                src="./images/img1.jpg"
+                alt="work"
+                height="244"
+                class="mx-auto"
+              />
             </div>
             <button
               type="button"
@@ -168,7 +176,7 @@
             </button>
           </li>
           <li
-            class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] basis-1/2 flex flex-col items-center text-center"
+            class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] flex flex-col items-center text-center"
           >
             <h4 class="text-[32px] leading-[30px] text-card-second mb-[25px]">
               Feedback Labs
@@ -177,8 +185,13 @@
               Feedback Labs turns feedback into actionable insights for your
               team.
             </p>
-            <div class="h-[244px] overflow-hidden mb-[25px]">
-              <img src="./images/img2.jpg" alt="work" class="mx-auto" />
+            <div class="overflow-hidden mb-[25px]">
+              <img
+                src="./images/img2.jpg"
+                alt="work"
+                height="244"
+                class="mx-auto"
+              />
             </div>
             <button
               type="button"
@@ -188,7 +201,7 @@
             </button>
           </li>
           <li
-            class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] basis-1/2 flex flex-col items-center text-center"
+            class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] flex flex-col items-center text-center"
           >
             <h4 class="text-[32px] leading-[30px] text-card-third mb-[25px]">
               Codekeeper
@@ -198,8 +211,13 @@
               publishers to provide source code escrow as part of service level
               and license agreements.
             </p>
-            <div class="h-[244px] overflow-hidden mb-[25px]">
-              <img src="./images/img3.jpg" alt="work" class="mx-auto" />
+            <div class="overflow-hidden mb-[25px]">
+              <img
+                src="./images/img3.jpg"
+                alt="work"
+                height="244"
+                class="mx-auto"
+              />
             </div>
             <button
               type="button"
@@ -209,7 +227,7 @@
             </button>
           </li>
           <li
-            class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] basis-1/2 flex flex-col items-center text-center"
+            class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] flex flex-col items-center text-center"
           >
             <h4 class="text-[32px] leading-[30px] text-card-fourth mb-[25px]">
               LegalSite
@@ -218,8 +236,13 @@
               Protected against legal risks, privacy compliant and always
               up-to-date with the latest regulatory developments.
             </p>
-            <div class="h-[244px] overflow-hidden mb-[25px]">
-              <img src="./images/img4.jpg" alt="work" class="mx-auto" />
+            <div class="overflow-hidden mb-[25px]">
+              <img
+                src="./images/img4.jpg"
+                alt="work"
+                height="244"
+                class="mx-auto"
+              />
             </div>
             <button
               type="button"
@@ -232,7 +255,7 @@
 
         <div class="banner flex justify-center items-center space-x-[33px]">
           <div
-            class="w-[59px] h-[66px] bg-[url('./images/thumb.png')] bg-right-bottom"
+            class="opacity-0 md:opacity-100 w-[59px] h-[66px] bg-[url('./images/thumb.png')] bg-right-bottom"
           ></div>
           <h3
             class="text-l text-txt-secondary text-center max-w-[500px] lg:max-w-[780px] xl:max-w-[882px]"
@@ -242,7 +265,7 @@
             that is a huge opportunity.
           </h3>
           <div
-            class="w-[59px] h-[66px] bg-[url('./images/thumb.png')] bg-right-bottom transform scale-x-[-1]"
+            class="opacity-0 md:opacity-100 w-[59px] h-[66px] bg-[url('./images/thumb.png')] bg-right-bottom transform scale-x-[-1]"
           ></div>
         </div>
       </section>
@@ -255,7 +278,7 @@
             We are hiring!
           </h3>
           <p
-            class="text-txt-secondary text-s font-circular-book mb-[30px] bg-bg-secondary bg-opacity-50"
+            class="text-txt-secondary text-s font-circular-book mb-[30px] bg-bg-secondary bg-opacity-80"
           >
             We're always looking for talented people to join and help build our
             startups. Check out our current openings
@@ -265,7 +288,9 @@
       </section>
 
       <section class="form bg-bg-accent">
-        <div class="container pt-[60px] pb-[70px] text-complementary-white">
+        <div
+          class="container pt-[60px] pb-[70px] text-complementary-white bg-[url('./images/roket.svg')] bg-no-repeat bg-r-b"
+        >
           <h3 class="text-xxl mb-[34px]">
             Are you ready <br />to board this rocket ship?
           </h3>
@@ -307,7 +332,7 @@
                 aria-required="true"
               ></textarea>
               <button
-                class="btn bg-txt-primary hover:bg-bg-accent transition-all duration-300 ease-in-out"
+                class="btn bg-txt-primary hover:bg-bg-accent hover:text-txt-primary"
                 type="submit"
               >
                 Submit
@@ -339,16 +364,16 @@
           <h4 class="mb-[19px]">Companies</h4>
           <ul class="text-complementary-green">
             <li>
-              <a class="leading-[35px]">Tolq</a>
+              <a class="leading-[35px] hover:text-txt-primary">Tolq</a>
             </li>
             <li>
-              <a class="leading-[35px]">LegalSite</a>
+              <a class="leading-[35px] hover:text-txt-primary">LegalSite</a>
             </li>
             <li>
-              <a class="leading-[35px]">Codekeeper</a>
+              <a class="leading-[35px] hover:text-txt-primary">Codekeeper</a>
             </li>
             <li>
-              <a class="leading-[35px]">Feedback Labs</a>
+              <a class="leading-[35px] hover:text-txt-primary">Feedback Labs</a>
             </li>
           </ul>
         </nav>
@@ -363,7 +388,7 @@
 
           <a
             href="mailto:starupz@mail.com"
-            class="text-complementary-green leading-snug"
+            class="text-complementary-green hover:text-txt-primary leading-snug"
             >Send us an email</a
           >
         </address>
@@ -371,7 +396,7 @@
           <h4 class="mb-[19px]">Follow us</h4>
           <ul class="fill-complementary-green flex gap-[15px] lg:flex-col">
             <li>
-              <a class="hover:fill-complementary-gray"
+              <a class="hover:fill-complementary-gray" href="#"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="23"
@@ -391,7 +416,7 @@
               ></a>
             </li>
             <li>
-              <a class="hover:fill-complementary-gray"
+              <a class="hover:fill-complementary-gray" href="#"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="23"
@@ -406,7 +431,7 @@
               ></a>
             </li>
             <li>
-              <a class="hover:fill-complementary-gray"
+              <a class="hover:fill-complementary-gray" href="#"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="23"
