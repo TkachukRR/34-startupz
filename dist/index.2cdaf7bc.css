@@ -386,8 +386,28 @@ a {
   top: 0;
 }
 
+.right-\[10px\] {
+  right: 10px;
+}
+
+.top-\[10px\] {
+  top: 10px;
+}
+
+.right-\[30px\] {
+  right: 30px;
+}
+
+.top-\[30px\] {
+  top: 30px;
+}
+
 .float-right {
   float: right;
+}
+
+.m-\[40px\] {
+  margin: 40px;
 }
 
 .mx-auto {
@@ -547,6 +567,10 @@ a {
   max-width: 512px;
 }
 
+.max-w-\[600px\] {
+  max-width: 600px;
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -558,6 +582,10 @@ a {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -691,6 +719,11 @@ a {
   background-color: rgb(251 250 250 / var(--tw-bg-opacity));
 }
 
+.bg-complementary-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 147 147 / var(--tw-bg-opacity));
+}
+
 .bg-complementary-green {
   --tw-bg-opacity: 1;
   background-color: rgb(70 184 200 / var(--tw-bg-opacity));
@@ -707,6 +740,10 @@ a {
 
 .bg-opacity-80 {
   --tw-bg-opacity: .8;
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: .9;
 }
 
 .bg-\[url\(\'\.\/images\/ben\.png\'\)\] {
@@ -1122,6 +1159,19 @@ a {
   animation-duration: 2s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
+}
+
+.backdrop {
+  z-index: 999;
+  pointer-events: initial;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 2.25s ease-in-out, visibility 2.25s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .hover\:bg-bg-accent:hover {

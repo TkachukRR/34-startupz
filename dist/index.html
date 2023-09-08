@@ -118,7 +118,7 @@
 
       <section id="works" class="works container pt-[140px] pb-[180px]">
         <h2 class="text-xl text-center tracking-[1px] mb-[55px]">Our works</h2>
-        <ul class="mb-[180px] grid lg:grid-cols-2 gap-[15px]">
+        <ul id="cards" class="mb-[180px] grid lg:grid-cols-2 gap-[15px]">
           <li class="px-[71px] pt-[45px] pb-[50px] rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)] flex flex-col items-center text-center">
             <h4 class="text-[32px] leading-[30px] text-card-first mb-[25px]">
               Tolq
@@ -131,7 +131,7 @@
             <div class="overflow-hidden mb-[25px]">
               <img src="/img1.f05a4ee2.jpg" alt="work" height="244" class="mx-auto">
             </div>
-            <button type="button" class="btn btn--transp-green px-[31px] py-[14px]">
+            <button type="button" class="btn btn--transp-green px-[31px] py-[14px]" data-action="showFullCardInfo">
               More
             </button>
           </li>
@@ -146,7 +146,7 @@
             <div class="overflow-hidden mb-[25px]">
               <img src="/img2.430268e0.jpg" alt="work" height="244" class="mx-auto">
             </div>
-            <button type="button" class="btn btn--transp-green px-[31px] py-[14px]">
+            <button type="button" class="btn btn--transp-green px-[31px] py-[14px]" data-action="showFullCardInfo">
               More
             </button>
           </li>
@@ -162,7 +162,7 @@
             <div class="overflow-hidden mb-[25px]">
               <img src="/img3.f9ded1b4.jpg" alt="work" height="244" class="mx-auto">
             </div>
-            <button type="button" class="btn btn--transp-green px-[31px] py-[14px]">
+            <button type="button" class="btn btn--transp-green px-[31px] py-[14px]" data-action="showFullCardInfo">
               More
             </button>
           </li>
@@ -177,7 +177,7 @@
             <div class="overflow-hidden mb-[25px]">
               <img src="/img4.c2194ce0.jpg" alt="work" height="244" class="mx-auto">
             </div>
-            <button type="button" class="btn btn--transp-green px-[31px] py-[14px]">
+            <button type="button" class="btn btn--transp-green px-[31px] py-[14px]" data-action="showFullCardInfo">
               More
             </button>
           </li>
@@ -300,6 +300,7 @@
         </nav>
       </div>
     </footer>
+
     <div id="helper" class="fixed bottom-0 right-0 p-[20px]">
       <div id="dialog" class="hidden mb-[20px] gap-[70px] flex justify-between">
         <div class="font-roboto text-xxxs text-complementary-white px-[18px] py-[14px] bg-complementary-green rounded-full rounded-br-none max-w-[260px]">
@@ -321,6 +322,7 @@
 
       <div id="ben" class="rounded-full w-[96px] h-[96px] border-[#FFFFFF] border-8 bg-[#F5F5F5] bg-[url('./images/ben.png')] bg-c bg-no-repeat shadow-[0px_4px_4px_rgba(29,75,82,0.25)] animate-breath float-right"></div>
     </div>
+
     <script src="/index.4d6bcbeb.js" defer=""></script>
   </body>
 </html>
