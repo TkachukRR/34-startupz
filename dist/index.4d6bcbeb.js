@@ -574,6 +574,61 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"gLLPy":[function(require,module,exports) {
+var _interactiveHelperJs = require("./scripts/interactiveHelper.js");
+const refs = {
+    helper: document.querySelector("#helper")
+};
+refs.helper.addEventListener("click", (0, _interactiveHelperJs.interactHelper));
+
+},{"./scripts/interactiveHelper.js":"2epdw"}],"2epdw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "interactHelper", ()=>interactHelper);
+function interactHelper(event) {
+    const targetElement = event.target;
+    const currentTarget = event.currentTarget;
+    if (targetElement.id === "ben") toggleDialogVisibility();
+    if (targetElement.parentElement.getAttribute("data-action") === "close") toggleDialogVisibility();
+    if (targetElement.parentElement.id === "answers") showAskField();
+    function toggleDialogVisibility() {
+        const dialogWindow = currentTarget.querySelector("#dialog");
+        dialogWindow.classList.toggle("hidden");
+    }
+    function showAskField() {
+        const askInput = currentTarget.querySelector("#question");
+        askInput.classList.remove("hidden");
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["f3BSW","gLLPy"], "gLLPy", "parcelRequirebea3")
 

@@ -78,7 +78,7 @@
 
 @keyframes fly {
   from {
-    transform: rotate(-20deg) translateY(500px) scale(10);
+    transform: rotate(-20deg) translateY(300px) scale(8);
   }
 }
 
