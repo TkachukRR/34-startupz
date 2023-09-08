@@ -574,7 +574,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"gLLPy":[function(require,module,exports) {
-var _interactiveHelperJs = require("./scripts/interactiveHelper.js");
+var _interactiveHelperJs = require("./scripts/interactive-helper.js");
 var _modalJs = require("./scripts/modal.js");
 const refs = {
     body: document.querySelector("body"),
@@ -584,28 +584,38 @@ const refs = {
 refs.helper.addEventListener("click", (0, _interactiveHelperJs.interactHelper));
 refs.cards.addEventListener("click", (0, _modalJs.modal));
 
-},{"./scripts/interactiveHelper.js":"2epdw","./scripts/modal.js":"1hEIt"}],"2epdw":[function(require,module,exports) {
+},{"./scripts/modal.js":"1hEIt","./scripts/interactive-helper.js":"4bOYp"}],"1hEIt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "interactHelper", ()=>interactHelper);
-function interactHelper(event) {
-    const targetElement = event.target;
-    const currentTarget = event.currentTarget;
-    if (targetElement.id === "ben") toggleDialogVisibility();
-    if (targetElement.parentElement.getAttribute("data-action") === "close") toggleDialogVisibility();
-    if (targetElement.parentElement.id === "answers") showAskField();
-    function toggleDialogVisibility() {
-        const dialogWindow = currentTarget.querySelector("#dialog");
-        dialogWindow.classList.toggle("hidden");
+parcelHelpers.export(exports, "modal", ()=>modal);
+var _modalMarkupJs = require("./modal-markup.js");
+function modal(e) {
+    const target = e.target;
+    if (target.getAttribute("data-action") !== "showFullCardInfo") return;
+    const title = target.parentNode.querySelector("h4").textContent;
+    const info = target.parentNode.querySelector("p").textContent;
+    const imgSrc = target.parentNode.querySelector("img").getAttribute("src");
+    document.body.insertAdjacentHTML("beforeend", (0, _modalMarkupJs.getModalMarkup)(title, info, imgSrc));
+    const modalWindow = document.querySelector("#modal");
+    const modalCloseBtn = modalWindow.querySelector("[data-action='close-modal']");
+    modalCloseBtn.addEventListener("click", onCloseModal);
+    document.addEventListener("keydown", onEscKeydown);
+    modalWindow.addEventListener("click", onBackdropClick);
+    function onCloseModal() {
+        modalCloseBtn.removeEventListener("click", onCloseModal);
+        document.removeEventListener("keydown", onEscKeydown);
+        modalWindow.removeEventListener("click", onBackdropClick);
+        modalWindow.remove();
     }
-    function showAskField() {
-        const askInput = currentTarget.querySelector("#question");
-        askInput.classList.remove("hidden");
-        askInput.focus();
+    function onEscKeydown(e) {
+        if (e.code === "Escape") onCloseModal();
+    }
+    function onBackdropClick(e) {
+        if (e.currentTarget === e.target) onCloseModal();
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./modal-markup.js":"c8Iqi"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -635,44 +645,22 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"1hEIt":[function(require,module,exports) {
+},{}],"c8Iqi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "modal", ()=>modal);
-function modal(e) {
-    const target = e.target;
-    if (target.getAttribute("data-action") !== "showFullCardInfo") return;
-    const title = target.parentNode.querySelector("h4").textContent;
-    const info = target.parentNode.querySelector("p").textContent;
-    const imgSrc = target.parentNode.querySelector("img").getAttribute("src");
-    document.body.insertAdjacentHTML("beforeend", getModalMarkup(title, info, imgSrc));
-    const modalWindow = document.querySelector("#modal");
-    const modalCloseBtn = modalWindow.querySelector("[data-action='close-modal']");
-    modalCloseBtn.addEventListener("click", onCloseModal);
-    document.addEventListener("keydown", onEscKeydown);
-    modalWindow.addEventListener("click", onBackdropClick);
-    function onCloseModal() {
-        modalCloseBtn.removeEventListener("click", onCloseModal);
-        document.removeEventListener("keydown", onEscKeydown);
-        modalWindow.removeEventListener("click", onBackdropClick);
-        modalWindow.remove();
-    }
-    function onEscKeydown(e) {
-        if (e.code === "Escape") onCloseModal();
-    }
-    function onBackdropClick(e) {
-        if (e.currentTarget === e.target) onCloseModal();
-    }
-    function getModalMarkup(title, info, imgSrc) {
-        return `
+parcelHelpers.export(exports, "getModalMarkup", ()=>getModalMarkup);
+function getModalMarkup(title, info, imgSrc) {
+    return `
         <div id="modal" class="backdrop bg-complementary-gray bg-opacity-90 flex justify-center items-center">
           <div class="relative bg-bg-primary max-w-[600px] m-[40px] px-[40px] py-[20px] text-txt-primary rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)]">
             <button
-              class="absolute top-[30px] right-[30px]"
+              class="absolute top-[30px] right-[30px] h-[30px] w-[30px] hover:bg-bg-accent bg-bg-secondary rounded-full rotate-[45deg]"
               type="button"
               data-action="close-modal"
+                aria-label="Close modal window"
             >
-              X
+                <span class="not-sr-only text-m">+</span>
+                <span class="sr-only">Close</span>
             </button>
             <div class="overflow-hidden mb-[25px]">
               <img
@@ -687,6 +675,26 @@ function modal(e) {
           </div>
         </div>
     `;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4bOYp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "interactHelper", ()=>interactHelper);
+function interactHelper(event) {
+    const targetElement = event.target;
+    const currentTarget = event.currentTarget;
+    if (targetElement.id === "ben") toggleDialogVisibility();
+    if (targetElement.parentElement.getAttribute("data-action") === "close") toggleDialogVisibility();
+    if (targetElement.parentElement.id === "answers") showAskField();
+    function toggleDialogVisibility() {
+        const dialogWindow = currentTarget.querySelector("#dialog");
+        dialogWindow.classList.toggle("hidden");
+    }
+    function showAskField() {
+        const askInput = currentTarget.querySelector("#question");
+        askInput.classList.remove("hidden");
+        askInput.focus();
     }
 }
 

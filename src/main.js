@@ -1,4 +1,4 @@
-import { interactHelper } from "./scripts/interactiveHelper.js";
+import { interactHelper as onInteractiveHelper } from "./scripts/interactive-helper.js";
 import { modal as onCardShowMore } from "./scripts/modal.js";
 
 const refs = {
@@ -7,5 +7,5 @@ const refs = {
   cards: document.querySelector("#cards"),
 };
 
-refs.helper.addEventListener("click", interactHelper);
+refs.helper.addEventListener("click", onInteractiveHelper);
 refs.cards.addEventListener("click", onCardShowMore);

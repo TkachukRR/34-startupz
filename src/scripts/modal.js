@@ -1,3 +1,5 @@
+import { getModalMarkup } from "./modal-markup.js";
+
 export function modal(e) {
   const target = e.target;
   if (target.getAttribute("data-action") !== "showFullCardInfo") return;
@@ -38,31 +40,5 @@ export function modal(e) {
     if (e.currentTarget === e.target) {
       onCloseModal();
     }
-  }
-
-  function getModalMarkup(title, info, imgSrc) {
-    return `
-        <div id="modal" class="backdrop bg-complementary-gray bg-opacity-90 flex justify-center items-center">
-          <div class="relative bg-bg-primary max-w-[600px] m-[40px] px-[40px] py-[20px] text-txt-primary rounded-[30px] shadow-[0px_8px_35px_0px_rgba(187,169,142,0.15)]">
-            <button
-              class="absolute top-[30px] right-[30px]"
-              type="button"
-              data-action="close-modal"
-            >
-              X
-            </button>
-            <div class="overflow-hidden mb-[25px]">
-              <img
-                src=".${imgSrc}"
-                alt="work"
-                height="244"
-                class="mx-auto"
-              />
-            </div>
-            <h2 class="text-center text-l mb-[20px]">${title}</h2>
-            <p class="text-m ">${info}</p>
-          </div>
-        </div>
-    `;
   }
 }
