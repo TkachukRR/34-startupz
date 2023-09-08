@@ -597,6 +597,7 @@ function interactHelper(event) {
     function showAskField() {
         const askInput = currentTarget.querySelector("#question");
         askInput.classList.remove("hidden");
+        askInput.focus();
     }
 }
 
